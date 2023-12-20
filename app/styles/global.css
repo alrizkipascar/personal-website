@@ -582,7 +582,17 @@ body {
     font-family: "Nunito", sans-serif;
     font-size: 25px;
   }
-
+  .top-h2 {
+    /* overflow: auto; */
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+  }
+  .top-link {
+    /* overflow: auto; */
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    width: fit-content;
+  }
   /* .sticky-services {
     display: hidden;
   } */
@@ -630,6 +640,7 @@ body {
 
 .grid-service {
   display: flex;
+  padding-top: 18px;
   /* grid-template-columns: repeat(5, minmax(0, 1fr)); */
   gap: 50px;
 }
@@ -680,24 +691,46 @@ body {
 }
 
 .color-place {
-  border-radius: 50px;
+  border-radius: 35px;
   /* background-color: #fdeeee; */
   width: auto;
   height: 60px;
   display: grid;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* grid-column: span 5 / span 5; */
+}
+.color-text {
   justify-content: center;
   align-self: center;
-  font-size: 25px;
-  /* grid-column: span 5 / span 5; */
 }
 @media screen and (max-width: 790px) {
   .paragraph-service {
     font-size: 15px;
     margin-bottom: 25px;
   }
+  .color-place {
+    border-radius: 35px;
+    /* background-color: #fdeeee; */
+    width: auto;
+    height: 45px;
+    display: grid;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* grid-column: span 5 / span 5; */
+  }
   /* .sticky-services {
     display: hidden;
   } */
+  .grid-service {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 10px;
+    /* grid-template-columns: repeat(5, minmax(0, 1fr)); */
+    gap: 50px;
+  }
 }
 /* {
   position: sticky;

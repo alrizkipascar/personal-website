@@ -37,9 +37,7 @@ export default function Top({ data }) {
       <section className="lg:w-[50%]  lg:h-1/2 ">
         <div className="lg:ml-[40px]">
           <div>
-            <h2 className="top-h2 ">
-              {data?.shortdesc ?? "Short Description"}
-            </h2>
+            <h2 className="top-h2 ">{"Short Description"}</h2>
             <a
               href={data?.link ?? "#"}
               className="flex top-link dashboard-title-section fromLeft"
@@ -53,7 +51,7 @@ export default function Top({ data }) {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-[30px] h-[30px]"
+                className="w-[10px] h-[10px] lg:w-[30px] lg:h-[30px]"
               >
                 <path
                   strokeLinecap="round"

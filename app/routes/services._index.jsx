@@ -37,9 +37,9 @@ export default function Services() {
       </h2>
       <ServicesCard Services={data?.Services ?? null} />
       <h2 className="section-title text-textWhite  mt-20 mb-10  text-[40px] lg:text-[60px]">
-        Usual Service
+        Standard Benefit
       </h2>
-      <div className="w-full md:w-6/12 px-4 lg:mr-auto">
+      <div className="w-full md:w-full px-4 ">
         <div className="flex flex-wrap">
           <div className="w-full md:w-6/12 px-4">
             <div className="relative flex flex-col mt-4">
@@ -60,8 +60,10 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h6 className="text-xl mb-1 font-semibold">{"none"}</h6>
-                <p className="mb-4 text-blueGray-500">{"none"}</p>
+                <h6 className="text-xl mb-1 font-semibold">{"Fast Website"}</h6>
+                <p className="mb-4 text-blueGray-500">
+                  {"I promise you fast website if you bought my services"}
+                </p>
               </div>
             </div>
             <div className="relative flex flex-col min-w-0">
@@ -82,8 +84,14 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h6 className="text-xl mb-1 font-semibold">{"none"}</h6>
-                <p className="mb-4 text-blueGray-500">{"none"}</p>
+                <h6 className="text-xl mb-1 font-semibold">
+                  {"Engaging Visuals"}
+                </h6>
+                <p className="mb-4 text-blueGray-500">
+                  {
+                    "I will gives your website the best practice and well made visuals for your company."
+                  }
+                </p>
               </div>
             </div>
           </div>
@@ -106,8 +114,14 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h6 className="text-xl mb-1 font-semibold">{"none"}</h6>
-                <p className="mb-4 text-blueGray-500">{"none"}</p>
+                <h6 className="text-xl mb-1 font-semibold">
+                  {"The source code & documentation"}
+                </h6>
+                <p className="mb-4 text-blueGray-500">
+                  {
+                    "I will give the source code & the documentation for you, I will give you detailed documentation for your future programmer."
+                  }
+                </p>
               </div>
             </div>
             <div className="relative flex flex-col min-w-0">
@@ -128,8 +142,14 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h6 className="text-xl mb-1 font-semibold">{"none"}</h6>
-                <p className="mb-4 text-blueGray-500">{"none"}</p>
+                <h6 className="text-xl mb-1 font-semibold">
+                  {"Friendly Phone Display"}
+                </h6>
+                <p className="mb-4 text-blueGray-500">
+                  {
+                    "It should be standard for a website at this point for having display for a mobile, because a lot of user or visitor often use phone to check on your business."
+                  }
+                </p>
               </div>
             </div>
           </div>

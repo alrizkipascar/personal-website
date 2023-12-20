@@ -64,7 +64,7 @@ export default function ProjectOverview() {
                     </span>
                     <span className="infra-place-name">{data?.name ?? ""}</span>
                   </div> */}
-          <div className="paragraph-service grid-service">
+          <div className="paragraph-service grid-service grid-cols-2">
             {Overview?.projectColor?.map((element, index) => (
               <div
                 key={index}
@@ -74,7 +74,7 @@ export default function ProjectOverview() {
                 }}
                 className="color-place"
               >
-                <p>{element?.color ?? "None"}</p>
+                <p className="color-text">{element?.color ?? "None"}</p>
               </div>
             ))}
           </div>

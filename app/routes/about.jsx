@@ -11,12 +11,12 @@ export default function About() {
   // await getAbout();
   return (
     <section className="snap-start h-[844px]  lg:h-screen bg-babyBlue shrink-0 min-w-full flex min-h-screen flex-col items-center justify-between pt-24 pb-6">
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 h-auto w-3/4 lg:w-[1100px] lg:h-[945px] transition-all duration-300">
+      <div className="grid grid-cols-1 gap-[40px] lg:grid-cols-2 h-auto w-3/4 lg:w-[1000px] lg:h-[700px] transition-all duration-300">
         <div className="rounded-2xl">
           <img
             src="https://alrizkipersonal.s3.ap-southeast-3.amazonaws.com/IMG_2229.jpeg"
             alt="about"
-            className="w-full h-full  object-cover lg:object-left sm:rounded-2xl transition-all duration-300"
+            className="w-full h-full  object-cover sm:rounded-2xl transition-all duration-300"
           ></img>
         </div>
         <div className=" flex-1 gap-4 w-full lg:w-full h-full transition-all duration-300">

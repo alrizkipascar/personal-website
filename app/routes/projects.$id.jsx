@@ -45,7 +45,7 @@ export default function ProjectId() {
   return (
     // <AnimatePresence>
     <article className="section-structure w-full project-base ">
-      <h1 className="text-[60px] lg:text-[100px]">
+      <h1 className="text-[40px] lg:text-[100px]">
         Project {data?.projectTop?.title ?? "No project found"}
       </h1>
       <main className="flex-row h-full ">
