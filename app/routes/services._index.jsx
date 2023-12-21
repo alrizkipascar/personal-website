@@ -156,7 +156,7 @@ export default function Services() {
         </div>
       </div>
       <HireMe />
-      <FAQ />
+      {/* <FAQ /> */}
       {/* <ServicesOverview /> */}
       {/* <a
         href={`#`}
