@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export default function MainHero() {
   return (
     <section className="h-3/4 mt-[100px] md:mt-[200px] md:pt-[175px] page-center">
@@ -34,12 +36,12 @@ export default function MainHero() {
           ></path>
         </svg>
       </a> */}
-      <button
-        href={`#`}
+      <Link
+        to={`/services`}
         className="button-fillup fill flex items-center"
         type="button"
       >
-        Learn More
+        My Services
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -55,7 +57,7 @@ export default function MainHero() {
             d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
           ></path>
         </svg>
-      </button>
+      </Link>
       {/* </div> */}
       {/* <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img

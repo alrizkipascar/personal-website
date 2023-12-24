@@ -10,39 +10,98 @@ export default function About() {
   const aboutContent = [];
   // await getAbout();
   return (
-    <section className="snap-start h-[844px]  lg:h-screen bg-babyBlue shrink-0 min-w-full flex min-h-screen flex-col items-center justify-between pt-24 pb-6">
-      <div className="grid grid-cols-1 gap-[40px] lg:grid-cols-2 h-auto w-3/4 lg:w-[1000px] lg:h-[700px] transition-all duration-300">
-        <div className="rounded-2xl">
-          <img
-            src="https://alrizkipersonal.s3.ap-southeast-3.amazonaws.com/IMG_2229.jpeg"
-            alt="about"
-            className="w-full h-full  object-cover sm:rounded-2xl transition-all duration-300"
-          ></img>
-        </div>
-        <div className=" flex-1 gap-4 w-full lg:w-full h-full transition-all duration-300">
-          <h1
-            className={` text-left w-full h-auto text-[35px] lg:text-[65px] text-slate-600 transition-all duration-300`}
-          >
-            Place that priotize you first.
-          </h1>
-          <div className="text-justify h-auto ">
-            <p className="text-[15px] lg:text-[20px] text-slate-800">
-              Getting the place you need doesn’t have to feel confusing and
-              impersonal.
-            </p>
-            <p className="text-[15px] lg:text-[20px] text-slate-800">
-              That’s why we’ve made it as easy as possible to get the product
-              you need with the personalized preference and first-class quality
-              of the product you deserve.
-            </p>
+    <section className="section-structure pt-[200px] lg:pt-[200px]">
+      <section className="snap-start h-auto  lg:h-screen bg-babyBlue shrink-0 min-w-full flex  flex-col items-center justify-between pb-6">
+        <div className="grid grid-cols-1 gap-[40px] lg:grid-cols-2 h-auto w-3/4 lg:w-[1000px] lg:h-[700px] transition-all duration-300">
+          <div className="rounded-2xl">
+            <img
+              src="https://alrizkipersonal.s3.ap-southeast-3.amazonaws.com/IMG_2229.jpeg"
+              alt="about"
+              loading="lazy"
+              className="w-full h-full  object-cover sm:rounded-2xl transition-all duration-300"
+            ></img>
           </div>
-          <div className="h-1/5 grid pt-6 w-full   justify-items-center">
-            <button className="w-1/2 h-[50px] rounded-3xl bg-orangeCream">
-              Book your workplace now!
-            </button>
+          <div className=" flex-1 gap-4 w-full lg:w-full h-full transition-all duration-300">
+            <h1
+              className={` text-left w-full h-auto text-[35px] lg:text-[65px] text-slate-600 transition-all duration-300`}
+            >
+              About Me
+            </h1>
+            <div className="text-justify h-auto ">
+              <p className="text-[15px] lg:text-[20px] text-slate-800">
+                My name is Alrizki Pasca Ramadhani, I am a software developer
+                from Indonesia, my current activity is learning a LOT of SEO,
+                web design for company, and aws services like s3 bucket and EC2,
+                because I wanted to build some projects on aws.
+              </p>
+              <p className="text-[15px] lg:text-[20px] text-slate-800">
+                Other than that I looking for a potential client that might be
+                need some help with building their online presence, especially
+                with company landing pages.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <h2 className="section-title text-textWhite  mt-20 mb-10  text-[40px] lg:text-[60px]">
+        Current Stack
+      </h2>
+      <li className="paragraph-service list-item">
+        Wordpress and Sanity for CMS.
+      </li>
+      <li className="paragraph-service list-item">
+        React, Next JS, Remix js for Frontend.
+      </li>
+      <li className="paragraph-service list-item">
+        Vercel, Hostinger, Firebase, for hosting,server,etc.
+      </li>
+      <li className="paragraph-service list-item">
+        Php and Node JS for Backend.
+      </li>
+      <li className="paragraph-service list-item">
+        Python for AI hobby projects with tensorflow and pytorch.
+      </li>
+      <li className="paragraph-service list-item">SQL,Postgre for database</li>
+
+      <h2 className="section-title text-textWhite  mt-20 mb-10  text-[40px] lg:text-[60px]">
+        Current tech that I explore
+      </h2>
+      <li className="paragraph-service list-item">AWS services</li>
+      <li className="paragraph-service list-item">Golang</li>
+      <li className="paragraph-service list-item">Vue js and Solid JS</li>
+      <li className="paragraph-service list-item">
+        Wordpress (diving into the ecosystem like woocomers.)
+      </li>
+      <li className="paragraph-service list-item">
+        Postgre (diving into rule and concurrency? or something like that)
+      </li>
+      <h2 className="section-title text-textWhite  mt-20 mb-10  text-[40px] lg:text-[60px]">
+        What I don't like:
+      </h2>
+      <li className="paragraph-service list-item">Framework cult behavior</li>
+      <p className="text-[15px] lg:text-[20px] text-slate-800 mb-6">
+        I am going to be honest, most of the time there is people that whining
+        about this "X" tech because their framework is good (in their mind), are
+        the most closed minded people I've ever seen, because most of the time I
+        see they never touch other language or framework, I think they are just
+        scared to learn a new thing, other than that yapping some nonsense
+        online is just their hobby I guess.
+      </p>
+      <li className="paragraph-service list-item">
+        A company that limit their employee to learn something new.
+      </li>
+      <li className="paragraph-service list-item">
+        Some funny question at interview
+      </li>
+      <p className="text-[15px] lg:text-[20px] text-slate-800 mb-6">
+        I experiencing some funny stuff at interview a few months ago that made
+        me questioning myself like "Do I really want to work with these guy and
+        girl?", "Should I be a freelancer?", or "are they really serious don't
+        understand the stack I explained?", before you jump to conclusion they
+        test me with that question, like NAH, they don't understand at all and
+        that company is tech company, like let's be for real.
+      </p>
+      <li className="paragraph-service list-item">Remix js lol.</li>
       {/* <div className="w-full md:w-6/12 px-4 lg:mr-auto">
         <div className="flex flex-wrap">
           <div className="w-full md:w-6/12 px-4">

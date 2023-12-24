@@ -25,7 +25,7 @@ export default function Header() {
     { href: "/projects", label: "Projects" },
     { href: "/services", label: "Services" },
     { href: "/blogs", label: "Blogs" },
-    // { href: "/about", label: "About" },
+    { href: "/about", label: "About" },
   ];
 
   if (!pathname.includes(admin)) {

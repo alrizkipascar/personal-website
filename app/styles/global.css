@@ -707,8 +707,8 @@ body {
 }
 @media screen and (max-width: 790px) {
   .paragraph-service {
-    font-size: 15px;
-    margin-bottom: 25px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
   .color-place {
     border-radius: 35px;
