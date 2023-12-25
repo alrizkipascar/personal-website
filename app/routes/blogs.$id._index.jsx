@@ -1,19 +1,18 @@
 import { PortableText } from "@portabletext/react";
 import { useLoaderData } from "@remix-run/react";
-import { RichTextComponents } from "../components/PortableText/components";
 import { getBlogView } from "../sanity/sanity-utils";
 import { json } from "@remix-run/node";
 import urlBuilder from "@sanity/image-url";
 import { getImageDimensions } from "@sanity/asset-utils";
 
 export default function BlogID() {
-  const { Blogs, RichTextComponent } = useLoaderData();
+  const { Blogs } = useLoaderData();
   if (typeof process !== "undefined") {
     // console.log(process.env.SANITY_PROJECT_ID);
     return <div className="pt-[200px]">loading...</div>;
   }
 
-  if (!Blogs || RichTextComponent == null) {
+  if (!Blogs) {
     return <p className="pt-[200px]">Loading..</p>;
   }
   console.log("data", Blogs.body);
@@ -169,8 +168,7 @@ export default function BlogID() {
 }
 export const loader = async ({ params }) => {
   const Blogs = await getBlogView(params?.id, "public");
-  const RichTextComponent = RichTextComponents;
-  return json({ Blogs, RichTextComponent });
+  return json({ Blogs });
 };
 
 export const meta = ({ data }) => {
