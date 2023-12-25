@@ -9,6 +9,17 @@ export const loader = async ({ params }) => {
   return json({ Blogs });
 };
 
+export const meta = () => {
+  return [
+    { title: "Blogs" },
+    {
+      property: "og:title",
+      content: "Blogs |",
+    },
+    { name: "description", content: "Blogs Section" },
+  ];
+};
+
 export default function Blogs() {
   const { Blogs } = useLoaderData();
   console.log("data", Blogs);

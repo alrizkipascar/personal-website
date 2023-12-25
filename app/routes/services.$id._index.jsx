@@ -36,7 +36,16 @@ export const loader = async ({ params }) => {
   ];
   return json({ serviceId, noteListItems, Service, OtherService });
 };
-
+export const meta = ({ data }) => {
+  return [
+    { title: "Service |" + data?.Service?.title ?? "Not Found" },
+    {
+      property: "og:title",
+      content: "Service |" + data?.Service?.title ?? "Not Found",
+    },
+    { name: "description", content: "Service Detail" },
+  ];
+};
 export default function ServicesId() {
   const data = useLoaderData();
   console.log("Service", data.Service);

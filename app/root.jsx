@@ -37,6 +37,7 @@ export function ErrorBoundary() {
       <head>
         <title>Oh no!</title>
         <Meta />{" "}
+        <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Links />
       </head>
@@ -63,25 +64,25 @@ export default function App() {
       gtag.pageview(location.pathname, gaTrackingId);
     }
   }, [location, gaTrackingId]);
-  if (!pathname.includes(admin)) {
-    return (
-      <html lang="en">
-        <head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <Meta />
-          <Links />
-          {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
-              />
-              <script
-                async
-                id="gtag-init"
-                dangerouslySetInnerHTML={{
-                  __html: `
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
+        <Meta />
+        <Links />
+        {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+            />
+            <script
+              async
+              id="gtag-init"
+              dangerouslySetInnerHTML={{
+                __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -90,66 +91,67 @@ export default function App() {
                   page_path: window.location.pathname,
                 });
               `,
-                }}
-              />
-            </>
-          )}
-        </head>
-        <body>
-          {/* root-base  */}
-          <NavHeader />
+              }}
+            />
+          </>
+        )}
+      </head>
+      <body>
+        {/* root-base  */}
+        {pathname.includes(admin) ? null : <NavHeader />}
 
-          <main className="root-base h-full">
-            <Outlet />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-            <Footer />
-          </main>
-        </body>
-      </html>
-    );
-  } else {
-    return (
-      <html lang="en">
-        <head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <Meta />
-          <Links />
-          {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
-              />
-              <script
-                async
-                id="gtag-init"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+        <main className="root-base h-full">
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
 
-                gtag('config', '${gaTrackingId}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-                }}
-              />
-            </>
-          )}
-        </head>
-        <body>
-          <main className="h-screen">
-            <Outlet />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-          </main>
-        </body>
-      </html>
-    );
-  }
+          {pathname.includes(admin) ? null : <Footer />}
+        </main>
+      </body>
+    </html>
+  );
+  //   return (
+  //     <html lang="en">
+  //       <head>
+  //         <meta charSet="utf-8" />
+  //         <meta name="viewport" content="width=device-width, initial-scale=1" />
+  //         <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
+  //         <Meta />
+  //         <Links />
+  //         {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
+  //           <>
+  //             <script
+  //               async
+  //               src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+  //             />
+  //             <script
+  //               async
+  //               id="gtag-init"
+  //               dangerouslySetInnerHTML={{
+  //                 __html: `
+  //               window.dataLayer = window.dataLayer || [];
+  //               function gtag(){dataLayer.push(arguments);}
+  //               gtag('js', new Date());
+
+  //               gtag('config', '${gaTrackingId}', {
+  //                 page_path: window.location.pathname,
+  //               });
+  //             `,
+  //               }}
+  //             />
+  //           </>
+  //         )}
+  //       </head>
+  //       <body>
+  //         <main className="h-screen">
+  //           <Outlet />
+  //           <ScrollRestoration />
+  //           <Scripts />
+  //           <LiveReload />
+  //         </main>
+  //       </body>
+  //     </html>
+  //   );
+  // }
 }

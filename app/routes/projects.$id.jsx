@@ -35,6 +35,17 @@ export const loader = async ({ params }) => {
   return json({ projectId, projectTop, noteListItems });
 };
 
+export const meta = ({ data }) => {
+  return [
+    { title: data?.projectTop?.title ?? "No project found" },
+    {
+      property: "og:title",
+      content: data?.projectTop?.title ?? "No project found",
+    },
+    { name: "description", content: data?.shortDesc ?? "No project found" },
+  ];
+};
+
 export default function ProjectId() {
   const data = useLoaderData();
   const location = useLocation();

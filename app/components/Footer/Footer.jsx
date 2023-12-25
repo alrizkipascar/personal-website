@@ -3,6 +3,7 @@ import EmailForm from "../Form/EmailForm";
 export default function Footer() {
   return (
     <footer
+      id="Footer"
       aria-label="Footer"
       className={`${`w-full h-auto lg:h-full  flex  flex-col items-center  lg:pt-24 bg-background`}`}
     >

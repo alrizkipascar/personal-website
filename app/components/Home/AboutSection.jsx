@@ -15,7 +15,7 @@ export default function AboutUs() {
             />
           </div>
 
-          <div class="about-us-info">
+          <div className="about-us-info">
             <h2>Digital Craftsman at Your Service</h2>
 
             <p>

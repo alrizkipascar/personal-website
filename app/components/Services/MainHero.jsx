@@ -1,4 +1,15 @@
 export default function MainHero() {
+  function mylinkfunction(e) {
+    window.location.href = "#Footer";
+
+    /* need to stop the form sending of the form
+
+     UPDATE as comment: This may not be exactly correct syntax 
+     for stopping a form , look up preventing form submission */
+
+    e.preventDefault();
+    e.stopPropagation();
+  }
   return (
     <section className="h1-hero section-pad flex flex-wrap md:items-center h-auto lg:h-[750px] pb-10">
       <div className=" w-full md:w-1/2 h-[50%] lg:h-[100%]">
@@ -41,11 +52,11 @@ export default function MainHero() {
           </p>
           <div className="grid  justify-center mt-[30px]">
             <button
-              href={`#`}
+              onClick={mylinkfunction}
               className="button-fillup md:w-[200px] h-[50px] fill flex items-center"
               type="button"
             >
-              Learn get it started
+              Build your Website Now!
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

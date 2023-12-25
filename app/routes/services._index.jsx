@@ -8,12 +8,6 @@ import { useLoaderData } from "@remix-run/react";
 import HireMe from "../components/Services/HireMe";
 
 // import {  } from "react";
-export const meta = () => {
-  return [
-    { title: "About Alrizki" },
-    { name: "description", content: "About Alrizki Pasca" },
-  ];
-};
 
 // export const links = () => [
 //   { rel: "stylesheet", href: services },
@@ -26,6 +20,18 @@ export const loader = async ({ params }) => {
 
   return json({ serviceId, Services });
 };
+
+export const meta = () => {
+  return [
+    { title: "Alrizki Pasca | Software Services" },
+    {
+      property: "og:title",
+      content: "Alrizki Pasca | Software Services",
+    },
+    { name: "description", content: "Software Services" },
+  ];
+};
+
 export default function Services() {
   const data = useLoaderData();
   return (

@@ -21,17 +21,17 @@ export default function StudioPage() {
   const MemoizedMDE = React.memo(Studio);
 
   return (
-    // <Hydrated>
-    // <div className="max-h-screen">
-    <Suspense fallback={<div>Loading...</div>}>
-      <MemoizedMDE
-        config={config}
-        // To enable guests view-only access to your Studio,
-        // uncomment this line!
-        // unstable_noAuthBoundary
-      />
-    </Suspense>
-    // </div>
-    // </Hydrated>
+    <Hydrated>
+      {/* // <div className="max-h-screen"> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Studio
+          config={config}
+          // To enable guests view-only access to your Studio,
+          // uncomment this line!
+          // unstable_noAuthBoundary
+        />
+      </Suspense>
+      {/* // </div> */}={" "}
+    </Hydrated>
   );
 }
