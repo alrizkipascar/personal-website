@@ -13,8 +13,10 @@ export default function Blogs() {
   const { Blogs } = useLoaderData();
   console.log("data", Blogs);
   return (
-    <section className="section-structure">
-      <h1 className="h1-blog ">My Blog</h1>
+    <article className="section-structure">
+      <header>
+        <h1 className="h1-blog ">My Blog</h1>
+      </header>
       <div className="timeline">
         <ul>
           {Blogs.map((blog, index) => (
@@ -24,6 +26,6 @@ export default function Blogs() {
           <div style={{ clear: "both" }}></div>
         </ul>
       </div>
-    </section>
+    </article>
   );
 }

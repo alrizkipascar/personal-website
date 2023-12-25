@@ -6,6 +6,12 @@ import about from "../styles/about.css";
 //   // ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 // ];
 
+export const meta = () => {
+  return [
+    { title: "About me" },
+    { name: "description", content: "About Alrizki Pasca" },
+  ];
+};
 export default function About() {
   const aboutContent = [];
   // await getAbout();

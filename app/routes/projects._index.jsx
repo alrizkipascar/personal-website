@@ -28,6 +28,21 @@ export const loader = async ({ params }) => {
   return json({ ProjectId, Projects, noteListItems });
 };
 
+export const meta = ({ data }) => {
+  return [
+    { title: "Alrizki Pasca | Projects" },
+    {
+      property: "og:title",
+      content: "Alrizki Pasca | Projects",
+    },
+    {
+      name: "description",
+      content:
+        "All of the projects by Alrizki that considered 'serious' projects.",
+    },
+  ];
+};
+
 export default function Projects() {
   const location = useLocation();
   const data = useLoaderData();

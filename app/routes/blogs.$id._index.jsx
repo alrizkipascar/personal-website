@@ -24,8 +24,8 @@ export default function BlogID() {
   blogTime = newDate.toLocaleTimeString();
   return (
     <section className="bg-background w-full h-full text-textWhite">
-      <div className="">
-        <article
+      <article className="">
+        <div
           className="bg-header flex items-center justify-center h-[600px] pb-12"
           style={{
             backgroundImage: `url(${Blogs?.imageUrl ?? null})`,
@@ -40,25 +40,40 @@ export default function BlogID() {
               <h1 className="text-5xl uppercase">{blog?.title}</h1>
               <p className="text-lg">Author Name</p>
             </div> */}
-        </article>
+        </div>
 
         <div className="font-serif leading-normal lg:w-[1000px] mx-auto py-12 px-4 ">
           <div className="bg-background text-textWhite font-serif mx-4 p-4 text-center md:p-8">
             <p className="italic text-sm">{blogDate + " " + blogTime}</p>
             <h1 className="text-5xl uppercase">{Blogs?.title}</h1>
-            <p className="text-lg">Author Name</p>
+            <a
+              itemProp="author"
+              name="Alrizki Pasca R"
+              href="https://alrizkipasca.com/about"
+              className="text-lg text-blue-700"
+            >
+              Alrizki Pasca
+            </a>
           </div>
           <PortableText components={RichTextComponent} value={Blogs.body} />
         </div>
-      </div>
+      </article>
     </section>
   );
 }
 export const loader = async ({ params }) => {
   const Blogs = await getBlogView(params?.id, "public");
-  const RichTextComponent = RichTextComponents(
-    process.env.SANITY_PROJECT_ID,
-    process.env.SANITY_DATASET
-  );
+  const RichTextComponent = RichTextComponents("ohvjliu6", "production");
   return json({ Blogs, RichTextComponent });
+};
+
+export const meta = ({ data }) => {
+  return [
+    { title: data?.Blogs?.title ?? "Error" },
+    {
+      property: "og:title",
+      content: data?.Blogs?.title ?? "Error",
+    },
+    { name: "description", content: "About Alrizki Pasca" },
+  ];
 };

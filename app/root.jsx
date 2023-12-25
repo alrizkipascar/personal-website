@@ -71,7 +71,7 @@ export default function App() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <Meta />
           <Links />
-          {process.env.NODE_ENV === "development" || !gaTrackingId ? null : (
+          {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
             <>
               <script
                 async
@@ -117,6 +117,29 @@ export default function App() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <Meta />
           <Links />
+          {process?.env?.NODE_ENV === "development" || !gaTrackingId ? null : (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+              />
+              <script
+                async
+                id="gtag-init"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${gaTrackingId}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+                }}
+              />
+            </>
+          )}
         </head>
         <body>
           <main className="h-screen">

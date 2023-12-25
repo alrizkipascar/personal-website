@@ -8,7 +8,7 @@ export default function TimelineBlog({ data }) {
     <li>
       <div className="content">
         <a href={`/blogs/${data?.slug}`}>
-          <h3>{data?.title}</h3>
+          <h2>{data?.title}</h2>
         </a>
         <a href={"/blogs/" + data?.slug}>
           <p>{data?.shortDesc}</p>

@@ -10,7 +10,7 @@ const CardType = {
 export default function ProjectCard({ data }) {
   const CurrentCard = CardType[data?.contentType];
   return (
-    <Link to={data?.slug} className="lg:h-full w-full ">
+    <Link to={"projects/" + data?.slug} className="lg:h-full w-full ">
       <CurrentCard data={data} />
     </Link>
   );

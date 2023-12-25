@@ -6,6 +6,7 @@ import { Hydrated } from "~/components/Hydrated";
 
 import { config } from "../../sanity.config";
 import { Studio } from "sanity";
+import React, { Suspense } from "react";
 
 export const meta = () => [
   { title: "Sanity Studio" },
@@ -17,15 +18,19 @@ export const meta = () => [
 // };
 
 export default function StudioPage() {
+  const MemoizedMDE = React.memo(Studio);
+
   return (
     // <Hydrated>
     // <div className="max-h-screen">
-    <Studio
-      config={config}
-      // To enable guests view-only access to your Studio,
-      // uncomment this line!
-      // unstable_noAuthBoundary
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <MemoizedMDE
+        config={config}
+        // To enable guests view-only access to your Studio,
+        // uncomment this line!
+        // unstable_noAuthBoundary
+      />
+    </Suspense>
     // </div>
     // </Hydrated>
   );
