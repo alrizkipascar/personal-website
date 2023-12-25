@@ -3,7 +3,7 @@ export const loader = () => {
   // set up our text content that will be returned in the response
   const robotText = `
         User-agent: *
-        Disallow: /admin/
+        Disallow: /admin
     
         Sitemap: https://www.alrizkipasca.com/sitemap.xml
         `;
