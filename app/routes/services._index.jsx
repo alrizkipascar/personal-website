@@ -68,7 +68,9 @@ export default function Services() {
                 </div>
                 <h6 className="text-xl mb-1 font-semibold">{"Fast Website"}</h6>
                 <p className="mb-4 text-blueGray-500">
-                  {"I promise you fast website if you bought my services"}
+                  {
+                    "I promise you fast website if you bought my services I will give you a website that have fast performance, Fast website is essential to gain a new leads, that’s why I focused on optimizing the loading time for the website."
+                  }
                 </p>
               </div>
             </div>
